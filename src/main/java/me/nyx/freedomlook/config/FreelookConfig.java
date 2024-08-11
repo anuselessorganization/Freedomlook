@@ -1,4 +1,4 @@
-package me.syz.freelook.config;
+package me.nyx.freedomlook.config;
 
 import cc.polyfrost.oneconfig.config.Config;
 import cc.polyfrost.oneconfig.config.annotations.Dropdown;
@@ -8,7 +8,7 @@ import cc.polyfrost.oneconfig.config.core.OneKeyBind;
 import cc.polyfrost.oneconfig.config.data.Mod;
 import cc.polyfrost.oneconfig.config.data.ModType;
 import cc.polyfrost.oneconfig.libs.universal.UKeyboard;
-import me.syz.freelook.FreelookMod;
+import me.nyx.freedomlook.FreedomlookMod;
 
 public class FreelookConfig extends Config {
     @KeyBind(name = "Key Bind", subcategory = "Key Bind")
@@ -20,7 +20,7 @@ public class FreelookConfig extends Config {
     @Switch(name = "Snaplook", subcategory = "Camera", description = "Always on if you're playing Hypixel!")
     public static boolean snaplook = false;
 
-    @Dropdown(name = "Perspective", options = {"First", "Third", "Reverse"}, subcategory = "Camera")
+    @Dropdown(name = "Perspective", options = { "First", "Third", "Reverse" }, subcategory = "Camera")
     public static int perspective = 1;
 
     @Switch(name = "Pitch", subcategory = "Camera")
@@ -39,7 +39,7 @@ public class FreelookConfig extends Config {
     public static boolean invertYaw = true;
 
     public FreelookConfig() {
-        super(new Mod(FreelookMod.NAME, ModType.UTIL_QOL), FreelookMod.MODID + ".json");
+        super(new Mod(FreedomlookMod.NAME, ModType.UTIL_QOL), FreedomlookMod.MODID + ".json");
 
         initialize();
 

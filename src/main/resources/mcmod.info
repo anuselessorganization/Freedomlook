@@ -2,11 +2,11 @@
   {
     "modid": "${id}",
     "name": "${name}",
-    "description": "Allows you to freely look around.",
+    "description": "Allows you to freely look around. (freedom version)",
     "version": "${version}",
     "mcversion": "${mcVersionStr}",
-    "url": "https://github.com/Syz66/Freelook",
-    "authorList": ["Syz66"],
+    "url": "https://github.com/anuselessorganization/Freedomlook",
+    "authorList": ["Syz66", "nyx"],
     "credits": "RiverCodesIG"
   }
 ]

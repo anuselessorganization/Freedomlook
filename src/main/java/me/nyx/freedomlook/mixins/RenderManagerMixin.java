@@ -1,6 +1,6 @@
-package me.syz.freelook.mixins;
+package me.nyx.freedomlook.mixins;
 
-import me.syz.freelook.Freelook;
+import me.nyx.freedomlook.Freelook;
 import net.minecraft.client.renderer.entity.RenderManager;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;

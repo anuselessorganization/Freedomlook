@@ -1,7 +1,7 @@
-package me.syz.freelook;
+package me.nyx.freedomlook;
 
 import cc.polyfrost.oneconfig.utils.hypixel.HypixelUtils;
-import me.syz.freelook.config.FreelookConfig;
+import me.nyx.freedomlook.config.FreelookConfig;
 import net.minecraft.client.Minecraft;
 
 public class Freelook {
@@ -19,7 +19,7 @@ public class Freelook {
     private int previousPerspective = 0;
 
     public void onPressed(boolean down) {
-        if (FreelookMod.config.enabled) {
+        if (FreedomlookMod.config.enabled) {
             if (down) {
                 cameraYaw = mc.thePlayer.rotationYaw;
                 cameraPitch = mc.thePlayer.rotationPitch;
@@ -57,7 +57,8 @@ public class Freelook {
 
     public boolean overrideMouse() {
         if (mc.inGameHasFocus) {
-            if (!perspectiveToggled) return true;
+            if (!perspectiveToggled)
+                return true;
 
             if (HypixelUtils.INSTANCE.isHypixel() || FreelookConfig.snaplook) {
                 cameraYaw = mc.thePlayer.rotationYaw;
@@ -67,8 +68,10 @@ public class Freelook {
 
             mc.mouseHelper.mouseXYChange();
 
-            if (FreelookConfig.yaw) handleYaw();
-            if (FreelookConfig.pitch) handlePitch();
+            if (FreelookConfig.yaw)
+                handleYaw();
+            if (FreelookConfig.pitch)
+                handlePitch();
 
             mc.renderGlobal.setDisplayListEntitiesDirty();
         }
@@ -79,7 +82,8 @@ public class Freelook {
         float sensitivity = calculateSensitivity();
         float yaw = mc.mouseHelper.deltaX * sensitivity;
 
-        if (FreelookConfig.invertYaw) yaw = -yaw;
+        if (FreelookConfig.invertYaw)
+            yaw = -yaw;
 
         cameraYaw += yaw * 0.15f;
     }
@@ -88,11 +92,13 @@ public class Freelook {
         float sensitivity = calculateSensitivity();
         float pitch = mc.mouseHelper.deltaY * sensitivity;
 
-        if (FreelookConfig.invertPitch) pitch = -pitch;
+        if (FreelookConfig.invertPitch)
+            pitch = -pitch;
 
         cameraPitch += pitch * 0.15f;
 
-        if (FreelookConfig.lockPitch) cameraPitch = Math.max(-90.0f, Math.min(cameraPitch, 90.0f));
+        if (FreelookConfig.lockPitch)
+            cameraPitch = Math.max(-90.0f, Math.min(cameraPitch, 90.0f));
     }
 
     public float calculateSensitivity() {
