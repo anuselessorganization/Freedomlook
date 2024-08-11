@@ -1,6 +1,6 @@
-package me.syz.freelook;
+package me.nyx.freedomlook;
 
-import me.syz.freelook.config.FreelookConfig;
+import me.nyx.freedomlook.config.FreelookConfig;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.WorldEvent;
@@ -9,10 +9,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-
 // TODO: Clean up Hypixel stuff.
-@Mod(modid = FreelookMod.MODID, name = FreelookMod.NAME, version = FreelookMod.VERSION)
-public class FreelookMod {
+@Mod(modid = FreedomlookMod.MODID, name = FreedomlookMod.NAME, version = FreedomlookMod.VERSION)
+public class FreedomlookMod {
     public static final String MODID = "@ID@";
     public static final String NAME = "@NAME@";
     public static final String VERSION = "@VER@";
@@ -38,7 +37,8 @@ public class FreelookMod {
     @SubscribeEvent
     public void onTick(TickEvent.RenderTickEvent event) {
         if (Freelook.mc.thePlayer != null && Freelook.mc.theWorld != null) {
-            if (event.phase.equals(TickEvent.Phase.START)) return;
+            if (event.phase.equals(TickEvent.Phase.START))
+                return;
 
             boolean down = FreelookConfig.keyBind.isActive();
             if (down != Freelook.INSTANCE.prevState && Freelook.mc.currentScreen == null) {
