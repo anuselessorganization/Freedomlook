@@ -42,6 +42,11 @@ jobs:
 
       - name: Chmod Gradle
         run: chmod +x ./gradlew
-
+        
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: versions/**/build/libs/
       - name: Build
         run: ./gradlew build --no-daemon
