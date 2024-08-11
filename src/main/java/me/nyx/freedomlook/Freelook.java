@@ -1,6 +1,5 @@
 package me.nyx.freedomlook;
 
-import cc.polyfrost.oneconfig.utils.hypixel.HypixelUtils;
 import me.nyx.freedomlook.config.FreelookConfig;
 import net.minecraft.client.Minecraft;
 
@@ -60,7 +59,7 @@ public class Freelook {
             if (!perspectiveToggled)
                 return true;
 
-            if (HypixelUtils.INSTANCE.isHypixel() || FreelookConfig.snaplook) {
+            if (FreelookConfig.snaplook) {
                 cameraYaw = mc.thePlayer.rotationYaw;
                 cameraPitch = mc.thePlayer.rotationPitch;
                 return true;
