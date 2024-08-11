@@ -6,7 +6,11 @@
     "version": "${version}",
     "mcversion": "${mcVersionStr}",
     "url": "https://github.com/anuselessorganization/Freelook",
-    "authorList": ["Syz66"],
-    "credits": "RiverCodesIG"
+    "updateUrl": "https://github.com/anuselessorganization/Freelook",
+    "authorList": ["Syz66", "nyx"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
   }
 ]
